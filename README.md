@@ -35,7 +35,10 @@ OS-Windows、Tomcat、MySQL
 
 
 ## 工作日誌 ##
-
+<ol><h5>2020/8/28</h5>
+	<li>增加Spring網頁配置器</li>
+	<li>學習Ajax回撈資訊到首頁</li>
+</ol>
 <ol><h5>2020/8/10</h5>
 		<li>套用Spring框架,重構</li>
 		<li>使用Maven管理</li>
