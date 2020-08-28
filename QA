@@ -1,0 +1,60 @@
+(apache)maven-archetype-webapp
+------------------------------------------
+https://www.itread01.com/content/1548739274.html
+------------------------------------------
+https://www.itread01.com/content/1548621565.html
+------------------------------------------
+Java Build Path下的Order and Export標籤，
+此時可看到src/test/java (missing)，
+將JRE System Library及Maven Dependencies打勾，
+按Apply->OK即可修復
+
+------------------------------------------
+https://blog.csdn.net/baidu_32045201/article/details/78386058
+在src/main目录下新建一个文件夹，建议取名resources
+点击 File -> Project Structure（或快捷键 Ctrl+Alt+Shift+S）
+点击 Modules- -> Sources 将新建的文件夹标记为 Resources
+在这里插入图片描述
+将 applicationContext.xml 放入resources文件夹
+重新编译运行即可
+------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------
+<scope>可以使用5個設定：
+ 1、 compile  (編譯)
+  此為預設值，表示此jar是所有階段需要的。 部署時將一起被打包到jar/war裡面。
+ 2、 test (測試)
+  表示此jar檔只有在測試時，才需要使用。如 junit jar 等。
+  部署時將不會打包到jar/war裡面。  
+ 3、 runtime (運行)
+  表示此jar檔只有在運行時，才需要使用。如jdbc jar等。  
+ 4、 provided (已提供)
+  當運行時，表示此jar檔期望由JDK、Tomcat及jboss等來提供。如 servlet.jar、jsp-api.jar 等。
+  部署時將不會打包到jar/war裡面。
+ 5、 system (系統)
+  表示此jar檔有系統提供。跟provided 相似，這是以外部JAR檔的形式提供。
+  而在maven repository 是無法找到它的。
+  需指定位置，配合 systemPath 來使用。
+  --------------------------------  
+src/main/java用來擺放一般程式碼，例如專案的商業邏輯程式等。；
+src/test/java用來擺放測試程式碼，例如單元測試的程式碼；
+src/main/resources用來擺放靜態資源例如properties或xml或設定檔等。
+  
+------------------------------------------
+
+------------------------------------------
