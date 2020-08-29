@@ -28,12 +28,12 @@ public class SendVerifyLinkServlet extends HttpServlet {
 		MemberDao md = Factory.getMemberFactory();
 		int salt = md.getSaltBy(id, email);
 
-		String link="http://localhost:8080/Blog/mailverify?id="+id+"&email="+email;
+		String link="http://localhost:8080/MicroBlog/mailVerifyServlet?id="+id+"&email="+email;
 		String text = link + "&salt=" + salt;
 	
 		request.setAttribute("subject", "開通郵件");
 		request.setAttribute("text", text);
-		request.getRequestDispatcher("mail").forward(request, response);
+		request.getRequestDispatcher("mailServlet").forward(request, response);
 	
 	
 	

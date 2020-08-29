@@ -6,6 +6,10 @@ import tw.com.microblog.sometest.GMailTest;
 
 public class Ttest {
 
+	
+	
+	
+	
 	// JavaMail測試
 	@Test
 	public void mailTest() {

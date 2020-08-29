@@ -13,10 +13,10 @@
 <body>
 	成功送出表單
 
-	<br> 測試
-	<form action="sendVerifyLink" method="post">
-		<input type="hidden" name="form" value="10gt12nc@gmail.com"> <input
-			type="hidden" name="to" value="10gt12nc@gmail.com"> <input
+	<br> 
+	<form action="sendVerifyLinkServlet" method="post">
+		<input type="hidden" name="form" value="linmicroblog@gmail.com"> <input
+			type="hidden" name="to" value="linmicroblog@gmail.com"> <input
 			type="hidden" name="subject" value="驗證"> 
 		<input type="hidden" name="id" value="${id}"> <input
 			type="hidden" name="email" value="${email}"> <input

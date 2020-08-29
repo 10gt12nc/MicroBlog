@@ -11,7 +11,7 @@
 <body>
 
 	<c:if test="${param.id == null}">
-		<c:redirect url="search_Message"></c:redirect>
+		<c:redirect url="search_MessageServlet"></c:redirect>
 	</c:if>
 
 	<font color="red">${errormessage}</font>
@@ -22,7 +22,7 @@
 	<hr>
 	新訊息:
 	<p>
-	<form action="edit_Message" method="post">
+	<form action="edit_MessageServlet" method="post">
 		<input type="hidden" name="id" value="${param.id}"> <input
 			type="hidden" name="message" value="${param.message}">
 

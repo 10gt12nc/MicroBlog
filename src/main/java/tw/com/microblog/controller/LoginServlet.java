@@ -25,9 +25,9 @@ public class LoginServlet extends HttpServlet {
 		String passwd = request.getParameter("passwd");
 
 		MemberDao mbdao = Factory.getMemberFactory();
-		boolean bllong = mbdao.getLogin(username, passwd);
+		boolean bllogin = mbdao.getLogin(username, passwd);
 
-		if (bllong) {
+		if (bllogin) {
 			// 如果沒Session就是null
 			if (request.getSession(false) != null) {
 				request.changeSessionId();
@@ -35,7 +35,8 @@ public class LoginServlet extends HttpServlet {
 			request.getSession().setAttribute("login", username);
 			request.getRequestDispatcher("/WEB-INF/views/login_success.jsp").forward(request, response);
 		} else {
-			response.sendRedirect("/WEB-INF/views/login.jsp");
+			request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);
+//			response.sendRedirect("/WEB-INF/views/login.jsp");
 		}
 
 	}

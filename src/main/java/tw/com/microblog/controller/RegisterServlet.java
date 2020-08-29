@@ -21,7 +21,7 @@ public class RegisterServlet extends HttpServlet {
 	public RegisterServlet() {
 		super();
 	}
-
+	//鹽值
 	private String salt() {
 		Random r = new Random();
 		String[] sixNum = new String[3];

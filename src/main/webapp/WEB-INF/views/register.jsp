@@ -17,7 +17,7 @@
 		<div class="row">
 			<div class="col-md-6 offset-md-3">
 
-				<form action="register" method="POST">
+				<form action="registerServlet" method="POST">
 
 					<table class="col-md-12">
 						<caption>

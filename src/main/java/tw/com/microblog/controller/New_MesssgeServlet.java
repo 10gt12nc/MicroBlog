@@ -40,10 +40,10 @@ public class New_MesssgeServlet extends HttpServlet {
 
 		if (message.length() >= 100) {
 			request.setAttribute("errormessage", "請勿超過100個字");
-			request.getRequestDispatcher("search_Message").forward(request, response);
+			request.getRequestDispatcher("search_MessageServlet").forward(request, response);
 		} else {
 			mbmdao.addMessage(mbmessage);
-			request.getRequestDispatcher("search_Message").forward(request, response);
+			request.getRequestDispatcher("search_MessageServlet").forward(request, response);
 		}
 
 	}

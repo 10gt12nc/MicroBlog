@@ -10,6 +10,7 @@ public class Factory {
 	public static MemberDao getMemberFactory() {
 		return new MemberDaoImpl();
 	}
+	
 	public static MessagesDao getMessagesFactory() {
 		return new MessagesDaoImpl();
 	}

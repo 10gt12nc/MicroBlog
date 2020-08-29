@@ -26,7 +26,7 @@
 	<input class="btn btn-lg btn-primary btn-block" type="button"
 		onclick="window.location='forgetpass.jsp'" value="修改密碼">
 
-	<form action="new_Messsge" method="post">
+	<form action="new_MesssgeServlet" method="post">
 		<textarea rows="4" cols="60" name="message" required></textarea>
 		<button type="submit">送出</button>
 	</form>
@@ -39,13 +39,13 @@
 				<!-- %= .get()% -->
 				<td style="vertical-align: top;">${messagez.message}</td>
 				<td>
-					<form action="del_Message" method="post">
+					<form action="del_MessageServlet" method="post">
 						<input type="hidden" name="id" value="${messagez.id}"> <input
 							class="btn btn-lg btn-primary btn-block" type="submit" value="刪除"></input>
 					</form>
 				</td>
 				<td>
-					<form action="edit_message.jsp" method="post">
+					<form action="/WEB-INF/views/edit_message.jsp" method="post">
 						<input type="hidden" name="id" value="${messagez.id}"> <input
 							type="hidden" name="message" value="${messagez.message}">
 						<input class="btn btn-lg btn-primary btn-block" type="submit"
@@ -53,7 +53,7 @@
 					</form>
 				</td>
 				<td>
-					<form action="open_Message" method="post">
+					<form action="open_MessageServlet" method="post">
 						<select name="open">
 							<option value="true">公開</option>
 							<option value="false">隱藏</option>

@@ -10,31 +10,32 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-//
-//@WebFilter(urlPatterns = { "/search_Message", "/member.jsp", "/del_Message", "/new_Messsge", "/loginOut",
-//		"/edit_message.jsp", "/edit_Message" })
-//public class LoginCertificate implements Filter {
-//
-//	public LoginCertificate() {
-//	}
-//
-//	public void destroy() {
-//	}
-//
-//	public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain)
-//			throws IOException, ServletException {
-//
-//		HttpServletRequest request = (HttpServletRequest) req;
-//		HttpServletResponse response = (HttpServletResponse) res;
-//
-//		if (request.getSession().getAttribute("login") == null) {
-//			response.sendRedirect("login.jsp");
-//		} else {
-//			chain.doFilter(request, response);
-//		}
-//	}
-//
-//	public void init(FilterConfig fConfig) throws ServletException {
-//	}
-//
-//}
+
+@WebFilter(urlPatterns = { "/search_MessageServlet", "/del_MessageServlet", "/new_MesssgeServlet", "/loginOutServlet",
+		"/edit_MessageServlet" })
+public class LoginCertificate implements Filter {
+
+	public LoginCertificate() {
+	}
+
+	public void destroy() {
+	}
+
+	public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain)
+			throws IOException, ServletException {
+
+		HttpServletRequest request = (HttpServletRequest) req;
+		HttpServletResponse response = (HttpServletResponse) res;
+
+		if (request.getSession().getAttribute("login") == null) {
+			response.sendRedirect("/WEB-INF/views/login.jsp");
+		} else {
+			//就算有login也不能進後台阿
+			chain.doFilter(request, response);
+		}
+	}
+
+	public void init(FilterConfig fConfig) throws ServletException {
+	}
+
+}

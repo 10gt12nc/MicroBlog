@@ -30,7 +30,7 @@
 		<div class="row">
 			<div class="col-md-6 offset-md-3">
 
-				<form action="login" method="post" class="form-signin">
+				<form action="loginServlet" method="post" class="form-signin">
 
 					<img class="mb-4" src="" alt="" width="72" height="72">
 
@@ -59,8 +59,9 @@
 						<tr>
 							<td><input class="btn btn-lg btn-primary btn-block"
 								type="button" 
-								onclick="window.location='/WEB-INF/views/register.jsp'"
-								value="註冊"></input></td>
+								
+								value="註冊"><a href="register" >register</a>
+								</td>
 							<td><input class="btn btn-lg btn-primary btn-block"
 								type="button" onclick="window.location='/WEB-INF/views/home.jsp'" value="回首頁"></input>
 							</td>

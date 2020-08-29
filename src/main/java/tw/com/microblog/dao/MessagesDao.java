@@ -12,6 +12,7 @@ public interface MessagesDao {
 
 	// 查所有訊息ByName
 	public List<Messagez> getAllMessage(String username);
+	
 	// 所有公開訊息
 	public List<Messagez> getAllMessage();
 
