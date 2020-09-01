@@ -39,7 +39,7 @@ public class Open_MessageServlet extends HttpServlet {
 			mgdao.openMessage(id, bl);
 		}
 
-		request.getRequestDispatcher("search_Message").forward(request, response);
+		request.getRequestDispatcher("search_MessageServlet").forward(request, response);
 
 	}
 

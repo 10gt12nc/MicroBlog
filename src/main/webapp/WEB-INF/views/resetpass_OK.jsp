@@ -9,6 +9,9 @@
 <body>
 
 OK
+<a href="home">home</a>
+
+<a href="login">login</a>
 
 </body>
 </html>

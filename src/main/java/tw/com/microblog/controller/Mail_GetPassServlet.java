@@ -32,7 +32,7 @@ public class Mail_GetPassServlet extends HttpServlet {
 		if (id > 0) {
 			request.setAttribute("subject", "妳的密碼");
 			request.setAttribute("text", pass);
-			request.getRequestDispatcher("mail").forward(request, response);
+			request.getRequestDispatcher("mailServlet").forward(request, response);
 
 		} else {
 			request.setAttribute("message", "無此帳號或郵件");

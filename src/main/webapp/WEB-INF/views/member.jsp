@@ -12,19 +12,17 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>會員訊息</title>
 </head>
+
+
 <body>
 	<c:out value="安安你好:${sessionScope.login}"></c:out>
 	<br>
 	<font color="red">${errormessage}</font>
 
 	<input class="btn btn-lg btn-primary btn-block" type="button"
-		onclick="window.location='loginOut'" value="登出"></input>
+		onclick="window.location='loginOutServlet'" value="登出"></input>
 
-	<input class="btn btn-lg btn-primary btn-block" type="button"
-		onclick="window.location='home.jsp'" value="回首頁"></input>
-
-	<input class="btn btn-lg btn-primary btn-block" type="button"
-		onclick="window.location='forgetpass.jsp'" value="修改密碼">
+		<a href="forgetpass">修改密碼</a>
 
 	<form action="new_MesssgeServlet" method="post">
 		<textarea rows="4" cols="60" name="message" required></textarea>
@@ -45,9 +43,9 @@
 					</form>
 				</td>
 				<td>
-					<form action="/WEB-INF/views/edit_message.jsp" method="post">
-						<input type="hidden" name="id" value="${messagez.id}"> <input
-							type="hidden" name="message" value="${messagez.message}">
+					<form action="editMessage" method="post">
+						<input type="hidden" name="id" value="${messagez.id}"> 
+						<input type="hidden" name="message" value="${messagez.message}">
 						<input class="btn btn-lg btn-primary btn-block" type="submit"
 							value="編輯"></input>
 					</form>
@@ -67,7 +65,7 @@
 			</tr>
 		</c:forEach>
 	</table>
-	
+
 
 
 

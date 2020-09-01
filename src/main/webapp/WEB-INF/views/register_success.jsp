@@ -25,18 +25,6 @@
 	</form>
 
 
-
-
-	<br>
-
-	<input class="btn btn-lg btn-primary btn-block" type="button"
-		onclick="window.location='home.jsp'" value="首頁"></input>
-	<br>或 登入
-	<input class="btn btn-lg btn-primary btn-block" type="button"
-		onclick="window.location='login.jsp'" value="登入頁"></input>
-
-
-
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>

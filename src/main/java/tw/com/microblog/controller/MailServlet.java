@@ -68,7 +68,7 @@ public class MailServlet extends HttpServlet {
 			Message message = creatMessage(form, to, subject, text);
 			Transport.send(message);
 //			System.out.println("郵件傳送成功");
-			response.getWriter().print("郵件傳送成功");
+			response.getWriter().print("郵件傳送成功,請到信箱確認");
 			
 
 		} catch (MessagingException e) {

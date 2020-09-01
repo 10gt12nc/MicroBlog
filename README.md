@@ -4,12 +4,8 @@
 
 ## 專案說明 ##
 目前進度:
-J2EE做的圍網誌的曾刪改查等功能正常
-改寫spring
-未來方向:
-方案一 : 新增版面,完整更新為論壇系統,可發帖回帖等
-翻案二 : 套用基本spring
-
+J2EE做的微網誌,實現增、刪、改、查、JavaMail驗證以及找回密碼等功能
+目前套用Spring做了頁面配置Controller 
 
 使用技術 :
 J2EE、Spring、RWD、Bootstrap
@@ -35,9 +31,18 @@ OS-Windows、Tomcat、MySQL
 
 
 ## 工作日誌 ##
-<ol><h5>2020/8/28</h5>
+
+
+<ol><h5>2020/9/1</h5>
+	<li>整理完畢,功能正常</li>
+	<li>問題:網址列出現Servlet(未修)</li>
+	<li>問題:重設密碼最小字數限制(未修)</li>
+	<li>開始製作前端頁面</li>
+</ol>
+<ol><h5>2020/8/31</h5>
+	<li>整理程式碼、資料結構</li>
 	<li>增加Spring網頁配置器</li>
-	<li>學習Ajax回撈資訊到首頁</li>
+	<li>學習JQuery、Ajax回撈資訊到首頁</li>
 </ol>
 <ol><h5>2020/8/10</h5>
 		<li>套用Spring框架,重構</li>

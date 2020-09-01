@@ -12,125 +12,19 @@
 <title>首頁</title>
 
 
-<script>
-    
 
-
-        function fun() {
-
-            $.ajax({
-
-                url: "get_OpenMessage",
-                type: "post",
-                data: {
-                    "name": "LLL",
-                    "age": "1100"
-                },
-                success: function() {
-                    alert(data);
-                }
-
-
-            });
-
-
-
-
-
-        }
-
-
-    }
-    
-    //-------------------------
-
-//執行$.ajax的JS檔案code
-
-
-$(document).ready(function(){
-
-//第一次讀取
- $returntrue=cartnumber();
-
-//自動更新
-if($returntrue){
-setInterval(function(){ cartnumber(); }, 10000);  //預設10000毫秒自動重複執行cartnumber()函數
-}
-function cartnumber(){
-
-$.ajax({
-
-url: xoopsjsurl + '/modules/neillibrary/ajax.php',
-
-type: 'POST',
-
-data: { id: '1'},
-
-success: function(response) {
-
-$('#test').html(response);
-
-},
-
-error: function() {
-
-console.log('ajax error!');
-
-}
-
-})
-
-}
-   return true; 
-});
-
-
-</script>
 
 </head>
 <body>
-
-
-https://neohsuxoops.blogspot.com/2018/04/ajaxfunction.html
-
-要顯示資料的內容區
-
-<div id='test'> </div>
-
-
-
-
-
-    <input type="button" value="GET" onclick="fun();">
-
-
-
-	<div>0 0 0 0 0 0</div>
-
-	<div>0 0改jQuery撈資料0 0</div>
-
-
-
-
-
-
-
-
-
-
 
 
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-6 offset-md-3">
 
-
-
 				<div>
 
-
-
-					<form action="get_OpenMessage" method="post">
+					<form action="get_OpenMessageServlet" method="post">
 						<input type="submit" value="取得新資訊" name="OpenMessage"
 							class="btn btn-lg btn-primary btn-block"></input>
 						<table border="1">
@@ -146,32 +40,28 @@ https://neohsuxoops.blogspot.com/2018/04/ajaxfunction.html
 
 					</form>
 
-
 				</div>
-
-
-
 
 
 
 				<c:choose>
 					<c:when test="${sessionScope.login !=null}">
 
-						<c:out value="會員空間:"></c:out>
+						<c:out value="會員訊息頁面:"></c:out>
+
 						<input class="btn btn-lg btn-primary btn-block" type="button"
-							onclick="window.location='search_Message'" value="會員訊息頁面"></input>
+							onclick="window.location='search_MessageServlet'" value="會員訊息頁面"></input>
+
 						<c:out value="登出:"></c:out>
 						<input class="btn btn-lg btn-primary btn-block" type="button"
-							onclick="window.location='loginOut'" value="登出"></input>
+							onclick="window.location='loginOutServlet'" value="登出"></input>
 					</c:when>
 					<c:otherwise>
 						<c:out value="登入:"></c:out>
-						<input class="btn btn-lg btn-primary btn-block" type="button"
-							onclick="window.location='login.jsp'" value="登入"></input>
+						<a href="login">login</a>
 						<p>
 							<c:out value="申請:"></c:out>
-							<input class="btn btn-lg btn-primary btn-block" type="button"
-								onclick="window.location='register.jsp'" value="註冊"></input>
+							<a href="register">register</a>
 					</c:otherwise>
 				</c:choose>
 

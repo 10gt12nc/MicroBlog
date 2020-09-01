@@ -28,11 +28,12 @@
 			</table>
 		
 			重設新密碼:
-			<form action="reset_Pass" method="post">
+			<form action="reset_PassServlet" method="post">
 				<input type="password" name="pass1" placeholder="密碼"
 					class="form-control" required size="25" maxlength="16"> <input
 					type="password" name="pass2" placeholder="確認密碼"
-					class="form-control" required size="25" maxlength="16">
+					class="form-control" required size="25" maxlength="16" >
+					
 				<!--  字數最小限制? -->
 
 				<input type="hidden" name="id" value="${id}"> 
@@ -43,7 +44,7 @@
 		</c:when>
 		<c:otherwise>
 
-			<form action="search_Pass" method="post">
+			<form action="search_PassServlet" method="post">
 				帳號:<input type="text" name="username"> 郵件:<input type="text"
 					name="email"> <input type="submit" value="送">
 
@@ -55,6 +56,8 @@
 	</c:choose>
 
 
+	<a href="login">login</a>
+	<a href="home">home</a>
 
 
 </body>

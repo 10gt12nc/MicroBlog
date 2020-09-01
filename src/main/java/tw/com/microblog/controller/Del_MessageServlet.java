@@ -25,7 +25,7 @@ public class Del_MessageServlet extends HttpServlet {
 		int id = Integer.parseInt(request.getParameter("id"));
 		MessagesDao mdao = Factory.getMessagesFactory();
 		mdao.deleteUser(id);
-		response.sendRedirect("search_Message");
+		response.sendRedirect("search_MessageServlet");
 
 	}
 

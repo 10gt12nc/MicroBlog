@@ -14,16 +14,12 @@
 
 
 
-<!-- Request -->
-<!-- 測試 -->
-<a href="home" >home</a>
-<a href="register" >register</a>
-<hr>
+
 
 <body class="text-center">
 
 	<c:if test="${sessionScope.login !=null}">
-		<c:redirect url="home.jsp"></c:redirect>
+		<c:redirect url="homeG"></c:redirect>
 	</c:if>
 
 	<div class="container-fluid">
@@ -57,20 +53,13 @@
 					<p>
 					<table class="col-md-12 ">
 						<tr>
-							<td><input class="btn btn-lg btn-primary btn-block"
-								type="button" 
-								
-								value="註冊"><a href="register" >register</a>
-								</td>
-							<td><input class="btn btn-lg btn-primary btn-block"
-								type="button" onclick="window.location='/WEB-INF/views/home.jsp'" value="回首頁"></input>
-							</td>
-							<td><input class="btn btn-lg btn-primary btn-block"
-								type="button" onclick="window.location='/WEB-INF/views/retrieve_pass.jsp'" value="找回密碼"></input>
-							</td>
+							<td><a href="register">register</a></td>
+							<td><a href="home">home</a></td>
+							<td><a href="retrieve_pass">retrievepass</a></td>
+							
 						</tr>
 					</table>
-					
+
 				</form>
 			</div>
 		</div>

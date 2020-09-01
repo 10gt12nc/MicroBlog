@@ -31,7 +31,7 @@ public class Edit_MessageServlet extends HttpServlet {
 			request.getRequestDispatcher("/WEB-INF/views/edit_message.jsp").forward(request, response);
 		} else {
 			mgdao.updateMessagez(id, message);
-			response.sendRedirect("search_Message");
+			response.sendRedirect("search_MessageServlet");
 
 		}
 

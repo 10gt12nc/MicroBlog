@@ -9,8 +9,7 @@
 <body>
 會員已開通,到首頁,
 
-<input class="btn btn-lg btn-primary btn-block"
-								type="button" onclick="window.location='home.jsp'" value="回首頁"></input>
+<a href="home">home</a>
 
 </body>
 </html>

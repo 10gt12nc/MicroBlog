@@ -40,7 +40,8 @@ public class Reset_PassServlet extends HttpServlet {
 			request.setAttribute("error2","密碼須相同");
 			request.getRequestDispatcher("/WEB-INF/views/forgetpass.jsp").forward(request, response);
 		}
-
+		
+		request.getSession().invalidate();
 		request.getRequestDispatcher("/WEB-INF/views/resetpass_OK.jsp").forward(request, response);
 
 	}

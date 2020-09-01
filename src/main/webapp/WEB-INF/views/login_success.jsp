@@ -21,8 +21,7 @@
 	<input class="btn btn-lg btn-primary btn-block" type="button"
 		onclick="window.location='search_MessageServlet'" value="會員訊息頁面"></input>
 		
-		<input class="btn btn-lg btn-primary btn-block"
-								type="button" onclick="window.location='home.jsp'" value="回首頁"></input>
+		
 	
 	<a href="home" >home</a>
 	

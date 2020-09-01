@@ -33,9 +33,11 @@
 
 
 	<input class="btn btn-lg btn-primary btn-block" type="button"
-		onclick="window.location='search_Message'" value="會員訊息頁面"></input>
+		onclick="window.location='search_MessageServlet'" value="會員訊息頁面"></input>
 	<input class="btn btn-lg btn-primary btn-block" type="button"
-		onclick="window.location='loginOut'" value="登出"></input>
+		onclick="window.location='loginOutServlet'" value="登出"></input>
+		
+			<a href="home">home</a>
 
 
 </body>

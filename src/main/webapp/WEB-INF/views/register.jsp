@@ -11,6 +11,9 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>register</title>
 </head>
+
+
+
 <body class="text-center">
 
 	<div class="container-fluid">
@@ -21,8 +24,7 @@
 
 					<table class="col-md-12">
 						<caption>
-							<font color="red">${message}</font> 
-							<font color="red">${message2}</font>
+							<font color="red">${message}</font> <font color="red">${message2}</font>
 						</caption>
 						<tr>
 							<th><label for="username">帳號:</label></th>
@@ -52,12 +54,6 @@
 								maxlength="100" class="form-control" placeholder="電子郵件" required></td>
 						</tr>
 
-						<!-- <tr>
-                                <th><label for="email"> 圖片驗證:</label>
-                                </th>
-                                <td>
-                                </td>
-                            </tr> -->
 
 					</table>
 
@@ -72,12 +68,8 @@
 							</td>
 						</tr>
 						<tr>
-							<td><input class="btn btn-lg btn-primary btn-block"
-								type="button" onclick="window.location='login.jsp'" value="回登入頁"></input>
-							</td>
-							<td><input class="btn btn-lg btn-primary btn-block"
-								type="button" onclick="window.location='home.jsp'" value="回首頁"></input>
-							</td>
+							<td><a href="login">login</a></td>
+							<td><a href="home">home</a></td>
 						</tr>
 
 
@@ -88,6 +80,9 @@
 			</div>
 		</div>
 	</div>
+
+
+
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script
