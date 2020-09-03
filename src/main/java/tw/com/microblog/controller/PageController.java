@@ -1,8 +1,17 @@
 package tw.com.microblog.controller;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import net.sf.json.JSONArray;
+import tw.com.microblog.bean.Messagez;
+import tw.com.microblog.dao.MessagesDao;
+import tw.com.microblog.factory.Factory;
 
 @Controller
 public class PageController {
@@ -18,7 +27,7 @@ public class PageController {
 	public String homeForGet() {
 
 		System.out.println("homeG");
-		return "home"; // home.jsp
+		return "home"; // 
 	}
 
 	// http://brianchen85.blogspot.com/2017/01/java-jsp-ajax-controller.html
@@ -64,5 +73,7 @@ public class PageController {
 		System.out.println("retrieve_pass~~~~");
 		return "retrieve_pass";
 	}
+	
+	
 
 }

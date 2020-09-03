@@ -30,13 +30,14 @@ public class AjaxGet_MessageServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		System.out.println("測試刷新1");
 		MessagesDao msdao = Factory.getMessagesFactory();
 		List<Messagez> mlist = msdao.getAllMessage();
 		
 		JSONArray json01 = JSONArray.fromObject(mlist);
 		PrintWriter out = response.getWriter();
 		out.print(json01);
-		
+		System.out.println("測試刷新2");
 
 	}
 

@@ -15,6 +15,9 @@
 
 
 <body>
+
+
+
 	<c:out value="安安你好:${sessionScope.login}"></c:out>
 	<br>
 	<font color="red">${errormessage}</font>
@@ -22,8 +25,8 @@
 	<input class="btn btn-lg btn-primary btn-block" type="button"
 		onclick="window.location='loginOutServlet'" value="登出"></input>
 
-		<a href="forgetpass">修改密碼</a>
-
+	<a href="forgetpass">修改密碼</a>
+	<a href="home">home</a>
 	<form action="new_MesssgeServlet" method="post">
 		<textarea rows="4" cols="60" name="message" required></textarea>
 		<button type="submit">送出</button>
@@ -44,8 +47,8 @@
 				</td>
 				<td>
 					<form action="editMessage" method="post">
-						<input type="hidden" name="id" value="${messagez.id}"> 
-						<input type="hidden" name="message" value="${messagez.message}">
+						<input type="hidden" name="id" value="${messagez.id}"> <input
+							type="hidden" name="message" value="${messagez.message}">
 						<input class="btn btn-lg btn-primary btn-block" type="submit"
 							value="編輯"></input>
 					</form>

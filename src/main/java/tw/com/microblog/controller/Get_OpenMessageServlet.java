@@ -1,6 +1,7 @@
 package tw.com.microblog.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -9,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import net.sf.json.JSONArray;
 import tw.com.microblog.bean.Messagez;
 import tw.com.microblog.dao.MessagesDao;
 import tw.com.microblog.factory.Factory;
@@ -27,10 +29,18 @@ public class Get_OpenMessageServlet extends HttpServlet {
 
 		MessagesDao msdao = Factory.getMessagesFactory();
 		List<Messagez> mlist = msdao.getAllMessage();
-		request.setAttribute("OMessagez", mlist);
+		
+//		request.setAttribute("OMessagez", mlist);
 		
 		
-		request.getRequestDispatcher("/WEB-INF/views/home.jsp").forward(request, response);
+		JSONArray json01 = JSONArray.fromObject(mlist);
+		
+		PrintWriter out = response.getWriter();
+		out.print(json01);
+		//jsp在WEB-INF/views jsp取不到
+	
+	
+//		request.getRequestDispatcher("/WEB-INF/views/home.jsp").forward(request, response);
 	
 	
 	

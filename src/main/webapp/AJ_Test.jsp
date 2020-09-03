@@ -13,43 +13,17 @@
 
 <script type="text/javascript">
 
-/*
-$(document).ready(function(){
-    timeoutId=setInterval(function(){
-        $.ajax({
-            type:"POST",
-            url:"AjaxGet_MessageServlet",
-            success:function(data){
-                $("#showArea").text(data);
-                
-            }
-        });
-    },1000);
-});
-*/
 
-function test(){
+function testPost(){
 	 $.ajax({ 
-			//type:"POST", //請求方式
-			//url:"AjaxGet_MessageServlet", //請求路徑：${base}/類所在的名稱空間/類名（配置檔案中執行對應類的那個name），名稱空間是在配置檔案中定義。
-			//data:{ "name":"zah","pass":"123"},  //傳參
-			
-			//-----------------------------------------
-			type:"GET",
-			url:"AjaxGet_MessageServlet", 
-			//-----------------------------------------
+			type:"POST", //請求方式
+			url:"AjaxGet_MessageServlet", //請求路徑：${base}/類所在的名稱空間/類名（配置檔案中執行對應類的那個name），名稱空間是在配置檔案中定義。
+			data:{ "name":"zah","pass":"123"},  //傳參
 			dataType: 'json',   //返回值型別
-			//-----------------------------------------
 			
-			success:function(json){	
-			    var result = JSON.stringify(json);  
-                console.log(result)
-			    $("#showArea02").text(result);
-	           }
-			});
-			//-----------------------------------------
+		
 			//(json) 返回值
-			/*
+		
 			success:function(json){	
 	    	  
 			    alert(json[0].username+":"+ json[0].password
@@ -58,15 +32,28 @@ function test(){
 			   
 			    // 需解析，否则返回 object
 			    var result = JSON.stringify(json);  
-                console.log(result)
-			    $("#showArea").text(result);
+              	console.log(result)
+			    $("#showArea01").text(result);
 			    //json[0]就相當於u1物件 
 			    
 			    //Map json.u1.username 
 	    	      
 	           }
 			});
-			*/
+			
+}
+function testGet(){
+	 $.ajax({ 
+			type:"GET",
+			url:"AjaxGet_MessageServlet", 
+			dataType: 'json',   
+			success:function(json){	
+			    var result = JSON.stringify(json);  
+                console.log(result)
+			    $("#showArea02").text(result);
+	           }
+			});
+		
  }
 
 </script>
@@ -75,13 +62,13 @@ function test(){
 </head>
 <body>
 
-<div id="showArea"></div>
+<input type="button" name="b" value="POST測試" onclick="testPost();" >
 <hr>
 <br>
-<input type="button" name="b" value="POST測試" onclick="test();" >
+<div id="showArea01"></div>
 <hr>
 <br>
-<input type="button" name="b" value="GET測試" onclick="test();" >
+<input type="button" name="b" value="GET測試" onclick="testGet();" >
 <hr>
 <br>
 <div id="showArea02"></div>
@@ -92,7 +79,7 @@ function test(){
 	<table id="showTable" border="1"> 
 		<tr> 
 			<td>姓名</td> 
-			<td>身份證</td> 
+			<td>訊息</td> 
 		</tr> 
 	</table> 
 	<script> 

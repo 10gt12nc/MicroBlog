@@ -13,9 +13,58 @@
 
 
 
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(
+			function() {
+
+				//第一次讀取
+				$returntrue = cartnumber();
+
+				//自動更新
+				if ($returntrue) {
+					setInterval(function() {
+						cartnumber();
+					}, 10000); //預設10000毫秒自動重複執行cartnumber()函數
+				}
+
+				function cartnumber() {
+					var url = "get_OpenMessageServlet";
+					$.ajax({
+						type : 'get',
+						url : url,
+						dataType : 'json',
+						success : function(data) {
+
+							$.each(data, function(i, list) {
+								var _tr = $("<tr><td>" + list.username + ":"
+										+ "</td><td>" + list.message
+										+ "</td></tr>");
+
+								$("#showTable").append(_tr);
+
+							})
+						},
+						error : function() {
+
+							window.location.href = "home";
+							console.log('ajax error!');
+
+						}
+
+					})
+
+				}
+				return true;
+			});
+</script>
+
 
 </head>
 <body>
+
+
 
 
 	<div class="container-fluid">
@@ -23,36 +72,16 @@
 			<div class="col-md-6 offset-md-3">
 
 
+				<br>
+				<table id="showTable" border="1">
+					<tr>
+						<td>使用者</td>
+						<td>訊息</td>
+					</tr>
+				</table>
 
-
-
-
-
-
-
-
-
-
-				<div>
-
-					<form action="get_OpenMessageServlet" method="post">
-						<input type="submit" value="取得新資訊" name="OpenMessage"
-							class="btn btn-lg btn-primary btn-block"></input>
-						<table border="1">
-							<c:forEach items="${OMessagez}" var="omessagez">
-								<tr>
-									<!-- %= .get()% -->
-									<td style="vertical-align: top;">${omessagez.username}</td>
-									<td>說:</td>
-									<td style="vertical-align: top;">${omessagez.message}</td>
-								</tr>
-							</c:forEach>
-						</table>
-
-					</form>
-
-				</div>
-
+				<hr>
+				<br>
 
 
 
@@ -82,13 +111,6 @@
 		</div>
 	</div>
 
-
-
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-	<script
-		src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
 
 </body>
