@@ -32,7 +32,9 @@ OS-Windows、Tomcat、MySQL
 
 ## 工作日誌 ##
 
-
+<ol><h5>2020/9/3</h5>
+	<li>測試成功jQuery+Ajax+JSON撈後臺訊息</li>
+</ol>
 <ol><h5>2020/9/1</h5>
 	<li>整理完畢,功能正常</li>
 	<li>問題:網址列出現Servlet(未修)</li>
