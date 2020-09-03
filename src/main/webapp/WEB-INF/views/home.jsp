@@ -22,6 +22,17 @@
 		<div class="row">
 			<div class="col-md-6 offset-md-3">
 
+
+
+
+
+
+
+
+
+
+
+
 				<div>
 
 					<form action="get_OpenMessageServlet" method="post">
@@ -41,6 +52,7 @@
 					</form>
 
 				</div>
+
 
 
 
