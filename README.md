@@ -34,6 +34,7 @@ OS-Windows、Tomcat、MySQL
 
 <ol><h5>2020/9/3</h5>
 	<li>測試成功jQuery+Ajax+JSON撈後臺訊息</li>
+	<li>Ajax自動更新頁面訊息</li>
 </ol>
 <ol><h5>2020/9/1</h5>
 	<li>整理完畢,功能正常</li>
