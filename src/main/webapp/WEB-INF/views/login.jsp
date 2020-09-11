@@ -10,11 +10,18 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>登入</title>
+
+
+
+
+<style>
+body {
+	margin-top: 100px;
+}
+</style>
+
+
 </head>
-
-
-
-
 
 <body class="text-center">
 
@@ -28,35 +35,31 @@
 
 				<form action="loginServlet" method="post" class="form-signin">
 
-					<img class="mb-4" src="" alt="" width="72" height="72">
-
 					<h1 class="h3 mb-3 font-weight-normal">請登入</h1>
 					<p>
-						<label for="inputEmail" class="sr-only">帳號:</label>
-						<!-- 盲人閱讀 -->
-						<input type="text" id="inputEmail" name="username"
-							class=" form-control" placeholder="帳號" required autofocus>
+						<label for="inputEmail" class="sr-only">帳號:</label> <input
+							type="text" id="inputEmail" name="username" class=" form-control"
+							placeholder="帳號" required autofocus>
 					</p>
 					<p>
 						<label for="Passwd" class="sr-only">密碼:</label> <input
 							type="password" id="Passwd" name="passwd" class="form-control"
 							placeholder="密碼" required>
 					</p>
-					<!--  
-					<div class="checkbox mb-3">
-						<label> <input type="checkbox" value="remember-me">
-							記住我
-						</label>
-					</div>
-					-->
+
 					<button class="btn btn-lg btn-primary btn-block" type="submit">登入</button>
 					<p>
 					<table class="col-md-12 ">
 						<tr>
-							<td><a href="register">register</a></td>
-							<td><a href="home">home</a></td>
-							<td><a href="retrieve_pass">retrievepass</a></td>
-							
+
+							<td><button class="btn btn-lg btn-primary btn-block"
+									type="button" onclick="javascript:location.href='register'">register</button></td>
+							<td><button class="btn btn-lg btn-primary btn-block"
+									type="button" onclick="javascript:location.href='home'">home</button></td>
+							<td><button class="btn btn-lg btn-primary btn-block"
+									type="button"
+									onclick="javascript:location.href='retrieve_pass'">retrieve_pass</button></td>
+
 						</tr>
 					</table>
 

@@ -37,8 +37,6 @@ public class Get_OpenMessageServlet extends HttpServlet {
 		
 		PrintWriter out = response.getWriter();
 		out.print(json01);
-		//jsp在WEB-INF/views jsp取不到
-	
 	
 //		request.getRequestDispatcher("/WEB-INF/views/home.jsp").forward(request, response);
 	

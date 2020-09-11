@@ -11,65 +11,90 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>會員訊息</title>
+
+
+
+<style>
+body {
+	margin-top: 20px;
+}
+
+div {
+	margin: 5px;
+}
+</style>
+
 </head>
 
 
 <body>
 
+	<div class="container">
+		<div>
+			<h4>
+				<c:out value="你好:${sessionScope.login}"></c:out>
+			</h4>
+		</div>
+		<div>
+			<font color="red">${errormessage}</font>
+		</div>
+		<div>
+			<input class="btn btn-lg btn-primary btn-block" type="button"
+				onclick="window.location='loginOutServlet'" value="登出"></input>
+		</div>
+		<div>
+			<button class="btn btn-lg btn-primary btn-block" type="button"
+				onclick="javascript:location.href='forgetpass'">修改密碼</button>
+		</div>
+		<div>
+			<button class="btn btn-lg btn-primary btn-block" type="button"
+				onclick="javascript:location.href='home'">home</button>
+		</div>
+		<div>
+			<form action="new_MesssgeServlet" method="post">
+				<textarea rows="4" cols="60" name="message" required></textarea>
+				<button type="submit">送出</button>
+			</form>
+		</div>
 
-
-	<c:out value="安安你好:${sessionScope.login}"></c:out>
-	<br>
-	<font color="red">${errormessage}</font>
-
-	<input class="btn btn-lg btn-primary btn-block" type="button"
-		onclick="window.location='loginOutServlet'" value="登出"></input>
-
-	<a href="forgetpass">修改密碼</a>
-	<a href="home">home</a>
-	<form action="new_MesssgeServlet" method="post">
-		<textarea rows="4" cols="60" name="message" required></textarea>
-		<button type="submit">送出</button>
-	</form>
-
-	<hr>
-	<br>
-	<table border="1">
-		<c:forEach items="${Messagez}" var="messagez">
-			<tr>
-				<!-- %= .get()% -->
-				<td style="vertical-align: top;">${messagez.message}</td>
-				<td>
-					<form action="del_MessageServlet" method="post">
-						<input type="hidden" name="id" value="${messagez.id}"> <input
-							class="btn btn-lg btn-primary btn-block" type="submit" value="刪除"></input>
-					</form>
-				</td>
-				<td>
-					<form action="editMessage" method="post">
-						<input type="hidden" name="id" value="${messagez.id}"> <input
-							type="hidden" name="message" value="${messagez.message}">
-						<input class="btn btn-lg btn-primary btn-block" type="submit"
-							value="編輯"></input>
-					</form>
-				</td>
-				<td>
-					<form action="open_MessageServlet" method="post">
-						<select name="open">
-							<option value="true">公開</option>
-							<option value="false">隱藏</option>
-						</select>
-						<p>
-							<input type="hidden" name="id" value="${messagez.id}"> <input
-								class="btn btn-lg btn-primary btn-block" type="submit"
-								value="送出"></input>
-					</form>
-				</td>
-			</tr>
-		</c:forEach>
-	</table>
-
-
+		<div>
+			<table border="1">
+				<c:forEach items="${Messagez}" var="messagez">
+					<tr>
+						<!-- %= .get()% -->
+						<td style="vertical-align: top;">${messagez.message}</td>
+						<td>
+							<form action="del_MessageServlet" method="post">
+								<input type="hidden" name="id" value="${messagez.id}"> <input
+									class="btn btn-lg btn-primary btn-block" type="submit"
+									value="刪除"></input>
+							</form>
+						</td>
+						<td>
+							<form action="editMessage" method="post">
+								<input type="hidden" name="id" value="${messagez.id}"> <input
+									type="hidden" name="message" value="${messagez.message}">
+								<input class="btn btn-lg btn-primary btn-block" type="submit"
+									value="編輯"></input>
+							</form>
+						</td>
+						<td>
+							<form action="open_MessageServlet" method="post">
+								<select name="open">
+									<option value="true">公開</option>
+									<option value="false">隱藏</option>
+								</select>
+								<p>
+									<input type="hidden" name="id" value="${messagez.id}">
+									<input class="btn btn-lg btn-primary btn-block" type="submit"
+										value="送出"></input>
+							</form>
+						</td>
+					</tr>
+				</c:forEach>
+			</table>
+		</div>
+	</div>
 
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

@@ -30,7 +30,8 @@ public class MailVerifyServlet extends HttpServlet {
 		MemberDao md=Factory.getMemberFactory();
 		md.activateEmail(id,email,salt);
 		request.getRequestDispatcher("/WEB-INF/views/mailverify_OK.jsp").forward(request, response);
-//		response.sendRedirect("/WEB-INF/views/mailverify_OK.jsp");
+
+		//		response.sendRedirect("/WEB-INF/views/mailverify_OK.jsp");
 		
 		
 		

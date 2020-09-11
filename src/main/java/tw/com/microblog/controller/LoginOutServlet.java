@@ -22,7 +22,8 @@ public class LoginOutServlet extends HttpServlet {
 			request.getSession().invalidate();
 		}
 		request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);
-//		response.sendRedirect("/WEB-INF/views/login.jsp");
+
+		//		response.sendRedirect("/WEB-INF/views/login.jsp");
 		
 		
 		

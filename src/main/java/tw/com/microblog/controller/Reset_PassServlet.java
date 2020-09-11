@@ -30,7 +30,7 @@ public class Reset_PassServlet extends HttpServlet {
 
 		MemberDao md = Factory.getMemberFactory();
 		
-		// 字數最小限制未處理
+		// 字數最小限制和兩次密碼驗證未處理
 
 		if (pass1.equals(pass2)) {
 			md.updatePass(id, pass1, pass2);

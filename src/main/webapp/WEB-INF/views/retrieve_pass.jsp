@@ -11,12 +11,10 @@
 	<font color="red">${message}</font>
 	<p>
 	<form action="mail_GetPassServlet" method="post">
-		帳號:<input type="text" name="username" required> 郵件:<input
+		帳號:<input type="text" name="username" required> <br>郵件:<input
 			type="text" name="email" required> <input type="submit"
-			value="送"> 
-			
-			<a href="home">home</a>
-			<a href="login">login</a>
+			value="送"> <br> <a href="home">home</a> <br> <a
+			href="login">login</a>
 	</form>
 
 </body>

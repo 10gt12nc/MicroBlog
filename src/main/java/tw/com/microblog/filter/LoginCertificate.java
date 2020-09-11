@@ -29,8 +29,9 @@ public class LoginCertificate implements Filter {
 
 		if (request.getSession().getAttribute("login") == null) {
 			response.sendRedirect("/WEB-INF/views/login.jsp");
+			
 		} else {
-			//就算有login也不能進後台阿
+
 			chain.doFilter(request, response);
 		}
 	}

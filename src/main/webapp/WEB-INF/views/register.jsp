@@ -10,6 +10,16 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>register</title>
+
+<style>
+body {
+	margin-top: 100px;
+}
+</style>
+
+
+
+
 </head>
 
 
@@ -18,6 +28,7 @@
 
 	<div class="container-fluid">
 		<div class="row">
+		
 			<div class="col-md-6 offset-md-3">
 
 				<form action="registerServlet" method="POST">
@@ -68,8 +79,10 @@
 							</td>
 						</tr>
 						<tr>
-							<td><a href="login">login</a></td>
-							<td><a href="home">home</a></td>
+							<td><button class="btn btn-lg btn-primary btn-block"
+									type="button" onclick="javascript:location.href='login'">login</button></td>
+							<td><button class="btn btn-lg btn-primary btn-block"
+									type="button" onclick="javascript:location.href='home'">home</button></td>
 						</tr>
 
 
