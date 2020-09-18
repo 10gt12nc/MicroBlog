@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%
+	String path = request.getContextPath();
+%>
+
 <!DOCTYPE html>
 
 
@@ -21,8 +25,9 @@
 body {
 	margin-top: 20px;
 }
-div{
-margin:5px;
+
+div {
+	margin: 5px;
 }
 </style>
 
@@ -50,7 +55,8 @@ margin:5px;
 										dataType : 'json',
 										success : function(data) {
 
-											$.each(
+											$
+													.each(
 															data,
 															function(i, list) {
 																/*
@@ -129,7 +135,7 @@ margin:5px;
 
 			</div>
 			<div>
-				<!--  
+<!--  
 				<table id="showTable" border="1">
 					<tr>
 						<td>使用者</td>

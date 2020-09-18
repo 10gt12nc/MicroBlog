@@ -2,6 +2,10 @@
 	pageEncoding="UTF-8"%>
 <%@page import="tw.com.microblog.bean.Messagez"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%
+	String path = request.getContextPath();
+%>
+
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
@@ -51,7 +55,7 @@ div {
 				onclick="javascript:location.href='home'">home</button>
 		</div>
 		<div>
-			<form action="new_MesssgeServlet" method="post">
+			<form action="<%=path %>/new_MesssgeServlet" method="post">
 				<textarea rows="4" cols="60" name="message" required></textarea>
 				<button type="submit">送出</button>
 			</form>
@@ -64,14 +68,14 @@ div {
 						<!-- %= .get()% -->
 						<td style="vertical-align: top;">${messagez.message}</td>
 						<td>
-							<form action="del_MessageServlet" method="post">
+							<form action="<%=path %>/del_MessageServlet" method="post">
 								<input type="hidden" name="id" value="${messagez.id}"> <input
 									class="btn btn-lg btn-primary btn-block" type="submit"
 									value="刪除"></input>
 							</form>
 						</td>
 						<td>
-							<form action="editMessage" method="post">
+							<form action="<%=path %>/editMessage" method="post">
 								<input type="hidden" name="id" value="${messagez.id}"> <input
 									type="hidden" name="message" value="${messagez.message}">
 								<input class="btn btn-lg btn-primary btn-block" type="submit"
@@ -79,7 +83,7 @@ div {
 							</form>
 						</td>
 						<td>
-							<form action="open_MessageServlet" method="post">
+							<form action="<%=path %>/open_MessageServlet" method="post">
 								<select name="open">
 									<option value="true">公開</option>
 									<option value="false">隱藏</option>

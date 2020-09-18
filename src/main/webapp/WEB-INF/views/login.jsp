@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%
+	String path = request.getContextPath();
+%>
+
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
@@ -33,7 +37,7 @@ body {
 		<div class="row">
 			<div class="col-md-6 offset-md-3">
 
-				<form action="loginServlet" method="post" class="form-signin">
+				<form action="<%=path %>/loginServlet" method="post" class="form-signin">
 
 					<h1 class="h3 mb-3 font-weight-normal">請登入</h1>
 					<p>

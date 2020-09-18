@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%
+	String path = request.getContextPath();
+%>
+
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
@@ -13,14 +17,14 @@
 <body>
 	成功送出表單
 
-	<br> 
-	<form action="sendVerifyLinkServlet" method="post">
-		<input type="hidden" name="form" value="linmicroblog@gmail.com"> <input
-			type="hidden" name="to" value="linmicroblog@gmail.com"> <input
-			type="hidden" name="subject" value="驗證"> 
-		<input type="hidden" name="id" value="${id}"> <input
-			type="hidden" name="email" value="${email}"> <input
-			type="submit" value="寄Gmail驗證">
+	<br>
+	<form action="<%=path %>/sendVerifyLinkServlet" method="post">
+		<input type="hidden" name="form" value="linmicroblog@gmail.com">
+		<input type="hidden" name="to" value="linmicroblog@gmail.com">
+		<input type="hidden" name="subject" value="驗證"> <input
+			type="hidden" name="id" value="${id}"> <input type="hidden"
+			name="email" value="${email}"> <input type="submit"
+			value="寄Gmail驗證">
 
 	</form>
 

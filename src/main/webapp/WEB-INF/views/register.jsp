@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
+<%
+	String path = request.getContextPath();
+%>
+
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
@@ -28,10 +33,10 @@ body {
 
 	<div class="container-fluid">
 		<div class="row">
-		
+
 			<div class="col-md-6 offset-md-3">
 
-				<form action="registerServlet" method="POST">
+				<form action="<%=path %>/register.do" method="POST">
 
 					<table class="col-md-12">
 						<caption>

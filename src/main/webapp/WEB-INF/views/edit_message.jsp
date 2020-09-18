@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%
+	String path = request.getContextPath();
+%>
+
 
 <!DOCTYPE html>
 <html>
@@ -22,7 +26,7 @@
 	<hr>
 	新訊息:
 	<p>
-	<form action="edit_MessageServlet" method="post">
+	<form action="<%=path %>/edit_MessageServlet" method="post">
 		<input type="hidden" name="id" value="${param.id}"> <input
 			type="hidden" name="message" value="${param.message}">
 
@@ -36,8 +40,8 @@
 		onclick="window.location='search_MessageServlet'" value="會員訊息頁面"></input>
 	<input class="btn btn-lg btn-primary btn-block" type="button"
 		onclick="window.location='loginOutServlet'" value="登出"></input>
-		
-			<a href="home">home</a>
+
+	<a href="home">home</a>
 
 
 </body>
