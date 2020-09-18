@@ -6,12 +6,14 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+import tw.com.microblog.basedao.Dao;
+import tw.com.microblog.bean.Memberz;
 import tw.com.microblog.bean.Messagez;
 import tw.com.microblog.dao.MessagesDao;
 import tw.com.microblog.utils.DBConnectionUtils;
 
 
-public class MessagesDaoImpl implements MessagesDao {
+public class MessagesDaoImpl extends Dao<Messagez> implements MessagesDao {
 
 	@Override
 	public void addMessage(Messagez mbmessage) {

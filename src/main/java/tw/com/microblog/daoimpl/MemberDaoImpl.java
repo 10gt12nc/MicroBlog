@@ -9,13 +9,17 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import tw.com.microblog.basedao.Dao;
 import tw.com.microblog.bean.Memberz;
 import tw.com.microblog.dao.MemberDao;
 import tw.com.microblog.utils.DBConnectionUtils;
 
 
-public class MemberDaoImpl implements MemberDao {
+public class MemberDaoImpl extends Dao<Memberz> implements MemberDao {
 
+	
+	
+	
 	@Override
 	public void addUser(Memberz mb) {
 		Connection conn = null;

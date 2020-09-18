@@ -1,4 +1,4 @@
-package tw.com.microblog.controller;
+package tw.com.microblog.baseservlet;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
