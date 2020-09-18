@@ -47,18 +47,13 @@ div {
 						}
 
 						function cartnumber() {
-							var url = "get_OpenMessageServlet";
-							$
-									.ajax({
+							var url = "get_OpenMessage.do";
+							$.ajax({
 										type : 'get',
 										url : url,
 										dataType : 'json',
 										success : function(data) {
-
-											$
-													.each(
-															data,
-															function(i, list) {
+											$.each(data,function(i, list) {
 																/*
 																var _tr = $("<tr><td>" + list.username + ":"
 																		+ "</td><td>" + list.message
@@ -75,11 +70,8 @@ div {
 																		+ list.message
 																		+ "</div>");
 
-																$("#myMsg")
-																		.append(
-																				_div);
-
-															})
+																$("#myMsg").append(_div);
+											})
 										},
 										error : function() {
 
@@ -111,11 +103,11 @@ div {
 						<c:out value="會員訊息頁面:"></c:out>
 
 						<input class="btn btn-lg btn-primary btn-block" type="button"
-							onclick="window.location='search_MessageServlet'" value="會員訊息頁面"></input>
+							onclick="window.location='search_Message.do'" value="會員訊息頁面"></input>
 
 						<c:out value="登出:"></c:out>
 						<input class="btn btn-lg btn-primary btn-block" type="button"
-							onclick="window.location='loginOutServlet'" value="登出"></input>
+							onclick="window.location='loginOut.do'" value="登出"></input>
 					</c:when>
 					<c:otherwise>
 						<table>
@@ -135,7 +127,7 @@ div {
 
 			</div>
 			<div>
-<!--  
+				<!--  
 				<table id="showTable" border="1">
 					<tr>
 						<td>使用者</td>

@@ -38,10 +38,10 @@ public class EncodingFilter extends HttpFilter {
 	}
 
 	@Override
-	public void doHFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
+	public void doHttpFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
 
-		request.setCharacterEncoding("UTF8");
+		request.setCharacterEncoding("UTF-8");
 
 		response.setContentType("text/html; charset=UTF-8");
 

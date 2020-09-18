@@ -15,18 +15,18 @@
 <body>
 
 	<c:if test="${param.id == null}">
-		<c:redirect url="search_MessageServlet"></c:redirect>
+		<c:redirect url="/search_Message.do"></c:redirect>
 	</c:if>
 
 	<font color="red">${errormessage}</font>
 
 	<p>
-		<c:out value="::::message:::${param.message}"></c:out>
+		<c:out value="舊message : ${param.message}"></c:out>
 	<p>
 	<hr>
-	新訊息:
+	修改的新訊息:
 	<p>
-	<form action="<%=path %>/edit_MessageServlet" method="post">
+	<form action="<%=path %>/edit_Message.do" method="post">
 		<input type="hidden" name="id" value="${param.id}"> <input
 			type="hidden" name="message" value="${param.message}">
 
@@ -37,9 +37,9 @@
 
 
 	<input class="btn btn-lg btn-primary btn-block" type="button"
-		onclick="window.location='search_MessageServlet'" value="會員訊息頁面"></input>
+		onclick="window.location='search_Message.do'" value="會員訊息頁面"></input>
 	<input class="btn btn-lg btn-primary btn-block" type="button"
-		onclick="window.location='loginOutServlet'" value="登出"></input>
+		onclick="window.location='loginOut.do'" value="登出"></input>
 
 	<a href="home">home</a>
 

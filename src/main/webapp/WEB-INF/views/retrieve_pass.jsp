@@ -14,7 +14,7 @@
 
 	<font color="red">${message}</font>
 	<p>
-	<form action="<%=path %>/mail_GetPassServlet" method="post">
+	<form action="<%=path %>/mail_GetPassword.do" method="post">
 		帳號:<input type="text" name="username" required> <br>郵件:<input
 			type="text" name="email" required> <input type="submit"
 			value="送"> <br> <a href="home">home</a> <br> <a

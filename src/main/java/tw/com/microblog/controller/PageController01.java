@@ -156,7 +156,7 @@ public class PageController01 extends BaseServlet {
 		MemberDao md = Factory.getMemberFactory();
 		int salt = md.getSaltBy(id, email);
 
-		String link = "http://localhost:8080/MicroBlog/mailVerifyServlet?id=" + id + "&email=" + email;
+		String link = "http://localhost:8080/MicroBlog/mailVerify.do?id=" + id + "&email=" + email;
 		String text = link + "&salt=" + salt;
 
 		request.setAttribute("subject", "開通郵件");
@@ -231,10 +231,10 @@ public class PageController01 extends BaseServlet {
 
 		if (message.length() >= 100) {
 			request.setAttribute("errormessage", "請勿超過100個字");
-			request.getRequestDispatcher("search_MessageServlet").forward(request, response);
+			request.getRequestDispatcher("search_Message.do").forward(request, response);
 		} else {
 			mbmdao.addMessage(mbmessage);
-			request.getRequestDispatcher("search_MessageServlet").forward(request, response);
+			request.getRequestDispatcher("search_Message.do").forward(request, response);
 		}
 
 	}
@@ -246,7 +246,7 @@ public class PageController01 extends BaseServlet {
 		int id = Integer.parseInt(request.getParameter("id"));
 		MessagesDao mdao = Factory.getMessagesFactory();
 		mdao.deleteUser(id);
-		response.sendRedirect("search_MessageServlet");
+		response.sendRedirect("search_Message.do");
 
 	}
 
@@ -263,7 +263,7 @@ public class PageController01 extends BaseServlet {
 			request.getRequestDispatcher("/WEB-INF/views/edit_message.jsp").forward(request, response);
 		} else {
 			mgdao.updateMessagez(id, message);
-			response.sendRedirect("search_MessageServlet");
+			response.sendRedirect("search_Message.do");
 
 		}
 
@@ -302,7 +302,7 @@ public class PageController01 extends BaseServlet {
 			mgdao.openMessage(id, bl);
 		}
 
-		request.getRequestDispatcher("search_MessageServlet").forward(request, response);
+		request.getRequestDispatcher("search_Message.do").forward(request, response);
 
 	}
 

@@ -39,7 +39,7 @@ class ValidateFormat {
 
 }
 
-@WebFilter("/registerServlet")
+@WebFilter("/register.do")
 public class ValidateRegister implements Filter {
 
 	public ValidateRegister() {

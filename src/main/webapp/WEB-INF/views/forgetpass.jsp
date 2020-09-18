@@ -31,7 +31,7 @@
 			</table>
 		
 			重設新密碼:
-			<form action="<%=path %>/reset_PassServlet" method="post">
+			<form action="<%=path %>/reset_Password.do" method="post">
 				<input type="password" name="pass1" placeholder="密碼"
 					class="form-control" required size="25" maxlength="16"> <input
 					type="password" name="pass2" placeholder="確認密碼"
@@ -47,7 +47,7 @@
 		</c:when>
 		<c:otherwise>
 
-			<form action="<%=path %>/search_PassServlet" method="post">
+			<form action="<%=path %>/search_Password.do" method="post">
 				帳號:<input type="text" name="username"> <br> 郵件:<input
 					type="text" name="email"> <input type="submit" value="送">
 

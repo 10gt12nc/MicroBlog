@@ -44,7 +44,7 @@ div {
 		</div>
 		<div>
 			<input class="btn btn-lg btn-primary btn-block" type="button"
-				onclick="window.location='loginOutServlet'" value="登出"></input>
+				onclick="window.location='loginOut.do'" value="登出"></input>
 		</div>
 		<div>
 			<button class="btn btn-lg btn-primary btn-block" type="button"
@@ -55,7 +55,7 @@ div {
 				onclick="javascript:location.href='home'">home</button>
 		</div>
 		<div>
-			<form action="<%=path %>/new_MesssgeServlet" method="post">
+			<form action="<%=path %>/new_Messsge.do" method="post">
 				<textarea rows="4" cols="60" name="message" required></textarea>
 				<button type="submit">送出</button>
 			</form>
@@ -68,14 +68,14 @@ div {
 						<!-- %= .get()% -->
 						<td style="vertical-align: top;">${messagez.message}</td>
 						<td>
-							<form action="<%=path %>/del_MessageServlet" method="post">
+							<form action="<%=path %>/delete_Message.do" method="post">
 								<input type="hidden" name="id" value="${messagez.id}"> <input
 									class="btn btn-lg btn-primary btn-block" type="submit"
 									value="刪除"></input>
 							</form>
 						</td>
 						<td>
-							<form action="<%=path %>/editMessage" method="post">
+							<form action="editMessage" method="post">
 								<input type="hidden" name="id" value="${messagez.id}"> <input
 									type="hidden" name="message" value="${messagez.message}">
 								<input class="btn btn-lg btn-primary btn-block" type="submit"
@@ -83,7 +83,7 @@ div {
 							</form>
 						</td>
 						<td>
-							<form action="<%=path %>/open_MessageServlet" method="post">
+							<form action="<%=path %>/open_Message.do" method="post">
 								<select name="open">
 									<option value="true">公開</option>
 									<option value="false">隱藏</option>

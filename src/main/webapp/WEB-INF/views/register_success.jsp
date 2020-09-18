@@ -18,7 +18,7 @@
 	成功送出表單
 
 	<br>
-	<form action="<%=path %>/sendVerifyLinkServlet" method="post">
+	<form action="<%=path %>/sendVerifyLink.do" method="post">
 		<input type="hidden" name="form" value="linmicroblog@gmail.com">
 		<input type="hidden" name="to" value="linmicroblog@gmail.com">
 		<input type="hidden" name="subject" value="驗證"> <input

@@ -34,12 +34,12 @@ public abstract class HttpFilter implements Filter {
 		
 		HttpServletRequest request = (HttpServletRequest) req;
 		HttpServletResponse response = (HttpServletResponse) res;
-		doHFilter(request, response, chain);
+		doHttpFilter(request, response, chain);
 		
 		
 	}
 	
-	public abstract void doHFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException ;
+	public abstract void doHttpFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException ;
 
 	
 	@Override

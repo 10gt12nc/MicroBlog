@@ -36,11 +36,11 @@ div {
 		</div>
 		<div>
 			<input class="btn btn-lg btn-primary btn-block" type="button"
-				onclick="window.location='loginOutServlet'" value="登出"></input>
+				onclick="window.location='loginOut.do'" value="登出"></input>
 		</div>
 		<div>
 			<input class="btn btn-lg btn-primary btn-block" type="button"
-				onclick="window.location='search_MessageServlet'" value="會員訊息頁面"></input>
+				onclick="window.location='search_Message.do'" value="會員訊息頁面"></input>
 		</div>
 		<div>
 
