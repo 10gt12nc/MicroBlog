@@ -50,8 +50,7 @@ margin:5px;
 										dataType : 'json',
 										success : function(data) {
 
-											$
-													.each(
+											$.each(
 															data,
 															function(i, list) {
 																/*

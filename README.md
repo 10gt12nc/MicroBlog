@@ -2,71 +2,30 @@
 
 開發人員:林廸凱
 
-## 專案說明 ##
+## 微網誌功能說明 ##
 
-主要目標在展現後端能力，此專案實現了增、刪、改、查、使用JavaMail驗證使用者以及找回密碼等功能。
-以J2EE為基礎套用Spring做了頁面配置Controller，未來將持續更新，目標是開發更完整的論壇系統。
- 
-1.使用技術 :
-JAVA、Servlet、JSP、J2EE、Spring、Ajax、JSON、RWD、Bootstrap
-2.使用工具 : 
-Maven、Github、Eclipse、Visual Studio Code
-3.專案環境 : 
-OS-Windows、Tomcat、MySQL
-
-4.(測試用帳密)
-GMail:
-linmicroblog@gmail.com
-l123d456k789
-
-MySQL:
-root
-123456
-
-## 微網誌功能 ##
-基於MVC架構:
-1.前置作業:
-1-2.bean資料夾,會員與訊息class,有屬性set get
-1-3.MySQL資料庫,對應bean 創建會員與訊息table
-1-4.controller資料夾,Servlet以及Spring網頁配置器
-1-5.dao資料夾,會員與訊息方法,用於存取資料
-1-6.daoImpl資料夾,實作dao
-1-7.factory資料夾,多型  鬆散 控制權
-1-8.filter資料夾,UTF-8編碼攔截器::、登入後才可進入會員專區攔截器::、註冊格式攔截器::
-(未來將AOP改寫)
-1-9.utils資料夾, 資料庫連結用
-(未來將用Spring 管理資料庫連結 )
-1-10.unity Test資料夾, 單元測試
-1-11.pom.xml  , Mevan管理Spring jar檔
-1-12.web.xml ,<error-page>
-1-13. 所有view視圖在WEB-INF下 做簡單的安全
-1-14.Github版控,由於是小專案,沒有使用分支等功能
-
-2.流程與詳細說明:
-2-1 web.xml一載入,會先跑index.jsp以及啟動springmvc 
-因為做了基本的網頁安全所以將所有view視圖放在WEB-INF下,最初index.jsp使用jsp:forward轉發到首頁。之後都會是用Spring網頁配置器和Servlet轉發至Views。
-2-2 首頁使用Ajax+JSON實作異步功能,自動更新資訊
- 在Servlet 使用工廠達到多型結構
- 撈取公開訊息的方法,回傳list後
-將list 轉成JSON 結構
-response回來首頁
-
-2-3 註冊
-驗證格式使用 正規表示式
-岩質
-
-Gmail驗證
-2-4 登入
-由於有session 判斷 顯示不同內容
-
-
-2-5 公開/隱藏訊息
-2-5 刪除
-2-6 編輯訊息
-2-7 修改密碼 
-2-5 忘記密碼 
-Gmail
-
+<ol><h5>使用技術</h5>
+	<li>JAVA</li>
+	<li>Servlet</li>
+	<li>JSP</li>
+	<li>J2EE</li>
+	<li>Spring</li>
+	<li>Ajax</li>
+	<li>JSON</li>
+	<li>RWD</li>
+	<li>Bootstrap</li>
+</ol>
+<ol><h5>使用工具</h5>
+	<li>Maven</li>
+	<li>Github</li>
+	<li>Eclipse</li>
+	<li>Visual Studio Code</li>
+</ol>
+<ol><h5>專案環境</h5>
+	<li>OS-Windows</li>
+	<li>Tomcat</li>
+	<li>MySQL</li>
+</ol>
 
 ## 工作日誌 ##
 
