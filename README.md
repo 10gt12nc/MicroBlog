@@ -2,7 +2,7 @@
 
 開發人員:林廸凱
 
-## 微網誌功能說明 ##
+## 微網誌說明 ##
 
 <ol><h5>使用技術</h5>
 	<li>JAVA</li>
@@ -28,6 +28,11 @@
 </ol>
 
 ## 工作日誌 ##
+
+<ol><h5>2020/9/18</h5>
+	<li>重構將各Servlet整合成一個PageController</li>
+	<li>嘗試使用Dao &lt T &gt </li>
+</ol>
 
 <ol><h5>2020/9/3</h5>
 	<li>測試成功jQuery+Ajax+JSON撈後臺訊息</li>
