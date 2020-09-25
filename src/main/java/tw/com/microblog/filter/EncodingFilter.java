@@ -4,17 +4,40 @@ import java.io.IOException;
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebFilter("/*")
-public class EncodingFilter extends HttpFilter {
+public class EncodingFilter extends HttpFilter   {
 
-	public EncodingFilter() {
-	}
+	private static final long serialVersionUID = 1L;
 
+	@Override
 	public void destroy() {
+		
 	}
+
+	@Override
+	protected void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
+			throws IOException, ServletException {
+		
+		request.setCharacterEncoding("UTF-8");
+
+		response.setContentType("text/html; charset=UTF-8");
+
+		chain.doFilter(request, response);
+	}
+	
+
+
+//	extends HttpFilter	
+	
+//	public EncodingFilter() {
+//	}
+//
+//	public void destroy() {
+//	}
 
 //	public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
 //
@@ -30,23 +53,23 @@ public class EncodingFilter extends HttpFilter {
 
 //	String UTF8;
 
-	@Override
-	public void init() throws ServletException {
+//	@Override
+//	public void init() throws ServletException {
 
 //		UTF8 = getFilterConfig().getInitParameter("UTF8");
 
-	}
-
-	@Override
-	public void doHttpFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
-			throws IOException, ServletException {
-
-		request.setCharacterEncoding("UTF-8");
-
-		response.setContentType("text/html; charset=UTF-8");
-
-		chain.doFilter(request, response);
-
-	}
+//	}
+//
+//	@Override
+//	public void doHttpFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
+//			throws IOException, ServletException {
+//
+//		request.setCharacterEncoding("UTF-8");
+//
+//		response.setContentType("text/html; charset=UTF-8");
+//
+//		chain.doFilter(request, response);
+//
+//	}
 
 }

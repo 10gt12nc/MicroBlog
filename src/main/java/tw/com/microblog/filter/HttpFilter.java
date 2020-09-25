@@ -11,6 +11,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+//自己寫試試看
 public abstract class HttpFilter implements Filter {
 
 	 private FilterConfig filterConfig;
