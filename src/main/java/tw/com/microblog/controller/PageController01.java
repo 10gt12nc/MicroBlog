@@ -313,6 +313,7 @@ public class PageController01 extends BaseServlet {
 		MessagesDao msdao = Factory.getMessagesFactory();
 		List<Messagez> mlist = msdao.getAllMessage();
 
+		
 		JSONArray json01 = JSONArray.fromObject(mlist);
 
 		PrintWriter out = response.getWriter();

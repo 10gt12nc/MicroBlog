@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(urlPatterns = { "/mailServlet" }, initParams = { @WebInitParam(name = "host", value = "smtp.gmail.com"),
 		@WebInitParam(name = "port", value = "587"), @WebInitParam(name = "user", value = "linmicroblog@gmail.com"),
-		@WebInitParam(name = "pass", value = "l123d456k789") })
+		@WebInitParam(name = "pass", value = "lin123dd456") })
 public class MailServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

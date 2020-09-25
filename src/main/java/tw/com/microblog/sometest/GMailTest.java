@@ -17,7 +17,7 @@ public class GMailTest {
 	static int port = 587;
 	static final String username = "linmicroblog@gmail.com";
 
-	static final String password = "l123d456k789";
+	static final String password = "lin123dd456";
 
 
 	public static void Send_mail(String To_mail, String Mail_title, String Mail_text) {

@@ -22,7 +22,7 @@
 				if ($returntrue) {
 					setInterval(function() {
 						cartnumber();
-					}, 10000); //預設10000毫秒自動重複執行cartnumber()函數
+					}, 10000);
 				}
 
 				function cartnumber() {
@@ -33,7 +33,7 @@
 						dataType : 'json',
 						success : function(data) {
 							$.each(data, function(i, list) {
-								var _tr = $("<tr><td>" + list.username+":"
+								var _tr = $("<tr><td>" + list.username + ":"
 										+ "</td><td>" + list.message
 										+ "</td></tr>");
 

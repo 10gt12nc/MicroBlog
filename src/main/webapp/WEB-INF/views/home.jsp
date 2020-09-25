@@ -32,28 +32,34 @@ div {
 </style>
 
 <script type="text/javascript">
-	$(document)
-			.ready(
-					function() {
+$(document).ready(
+		function() {
 
-						//第一次讀取
-						$returntrue = cartnumber();
+			//第一次讀取
+			var return_true =  getMS();
 
-						//自動更新
-						if ($returntrue) {
-							setInterval(function() {
-								cartnumber();
-							}, 10000); //預設10000毫秒自動重複執行cartnumber()函數
-						}
+			//自動更新
+			if (return_true) {
+				setInterval(function() {
+					$("#myMsg").empty();
+					getMS();
+				}, 10000);
+			}
 
-						function cartnumber() {
+						function getMS() {
 							var url = "get_OpenMessage.do";
-							$.ajax({
+							$
+									.ajax({
 										type : 'get',
 										url : url,
 										dataType : 'json',
 										success : function(data) {
-											$.each(data,function(i, list) {
+											$
+													.each(
+															data,
+															function(i, list) {
+																console
+																		.log('ajax OK');
 																/*
 																var _tr = $("<tr><td>" + list.username + ":"
 																		+ "</td><td>" + list.message
@@ -69,9 +75,8 @@ div {
 																		+ "</h4>"
 																		+ list.message
 																		+ "</div>");
-
 																$("#myMsg").append(_div);
-											})
+															})
 										},
 										error : function() {
 
@@ -79,12 +84,11 @@ div {
 											console.log('ajax error!');
 
 										}
-
 									})
-
-						}
 						return true;
+						}
 					});
+	
 </script>
 
 
